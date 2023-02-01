@@ -20,7 +20,7 @@ body{
 /*Main Container and Forms*/
 #mainContainer{
   width: 35%;
-  height: 410px;
+  height: 490px;
   background: #fff;
   border-radius: 7px;
   padding: 30px;
@@ -28,27 +28,31 @@ body{
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
-.form :where(input, button){
+.form :where(input, button, select){
   width: 100%;
-  height: 55px;
+  height: 58px;
   border: none;
   outline: none;
   border-radius: 5px;
   transition: 0.1s ease;
 }
 
-.form input{
-  font-size: 18px;
-  padding: 0 15px;
-  border: 1px solid #999;
+.form input, select{
+  font-size: 20px !important;
+  border: 1px solid #999 !important;
 }
 
-.form input:focus{
+.form input:focus, select:focus{
   box-shadow: 0 3px 6px rgba(0,0,0,0.13);
 }
 
-.form input::placeholder{
+.form input::placeholder, select::placeholder{
   color: #999;
+}
+
+.form label {
+  color: #999;
+  margin-left: 15px;
 }
 
 .form button{
@@ -61,6 +65,25 @@ body{
 .form button:hover{
   transition: 0.3s;
   background: #0075c3;
+}
+
+.color-input {
+  padding-right: 0px !important;
+}
+
+.color-input input {
+  border-top-right-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+}
+
+.color-picker {
+  padding-left: 0px !important;
+}
+
+.color-picker input {
+  padding: 0px;
+  margin-left: -4px;
+  border: none;
 }
 /*--------------*/
 
@@ -84,7 +107,7 @@ fieldset {
 
 /*Wrapper Active*/
 #mainContainer.active{
-  height: 670px;
+  height: 750px;
 }
 /*--------------*/
 

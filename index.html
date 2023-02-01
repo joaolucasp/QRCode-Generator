@@ -20,7 +20,7 @@
   <script src="https://kit.fontawesome.com/eac825cd8d.js" crossorigin="anonymous"></script>
 
   <!-- Shortcut Icon -->
-  <link rel="shortcut icon" href="assets/images/qrcode-icon.png" type="image/png">
+  <link rel="shortcut icon" href="assets/images/qrcode-icon.png" type="image/x-icon">
 
   <!-- HTML5Shiv -->
   <!--[if lt IE 9]>
@@ -35,31 +35,93 @@
   <section id="mainContainer" class="container text-center">
     <header>
       <h1>QR Code Generator</h1>
-      <p>Cole uma URL ou insira um texto para criar seu QRCode.</p>
+      <p>Preencha os campos para criar seu QRCode.</p>
     </header>
 
-    <div class="form row">
+    <div class="form">
       <fieldset class="text-start mb-2">
         Campos Obrigatórios (*)
       </fieldset>
 
-      <div class="col-12 form-floating">
-        <input required='' onfocus="" name="text" id="key" inputmode="text" type="text"
-          placeholder="Informe o valor que deseja para o QR Code">
-        <hr>
+      <div class="row">
+
+        <div class="col-md-9 form-floating">
+          <input required='' inputmode="text" type="text"
+            name="name" id="key" class="form-control"
+            placeholder="Informe o valor que deseja para o QR Code"
+          >
+          <label for="key">Informe o valor que deseja para o QR Code</label>
+          
+        </div>
+
+        <div class="col-md-3 form-floating ls-custom-select">
+          <select class="form-select ls-custom" id="format" aria-label="Opções de formato de arquivo" placeholder="Formato">
+            <option selected value="png">.PNG</option>
+            <option value="gif">.GIF</option>
+            <option value="jpeg">.JPEG</option>
+            <option value="jpg">.JPG</option>
+            <option value="svg">.SVG</option>
+            <option value="eps">.EPS</option>
+          </select>
+          <label for="widhtSize">Formato</label>
+        </div>
+
+        <div class="col-12">
+          <hr>
+        </div>
+
       </div>
 
       <fieldset class="text-start mb-2">
-        Parâmetros Opcionais
+        Customização (Opcional)
       </fieldset>
 
-      <div class="col-md-6">
-        <input required='' name="widhtSize" inputmode="number" type="number" placeholder="Largura (px)">
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <div class="row">
+            <div class="col-8 form-floating color-input">
+              <input inputmode="number" type="number"
+              name="color" id="color" class="form-control"
+              placeholder="#Color">
+              <label for="color">#Color</label>
+            </div>
+            <div class="col-4 color-picker">
+              <input type="color" class="form-control form-control-color input-group-text" 
+              id="GFG_Color" value="#000000" 
+              >
+            </div>
+          </div>
+        
+        </div>
+  
+        <div class="col-md-6">
+          <div class="row">
+            <div class="col-8 form-floating color-input">
+              <input inputmode="number" type="number"
+              name="backgroundColor" id="backgroundColor" class="form-control"
+              placeholder="#BackgroundColor">
+              <label for="backgroundColor">#BackgroundColor</label>
+            </div>
+            <div class="col-4 color-picker">
+              <input type="color" class="form-control form-control-color input-group-text" 
+              id="GFG_BackgroundColor" value="#ffffff" 
+              >
+            </div>
+          </div>
+        
+        </div>
       </div>
 
-      <div class="col-md-6 mb-3">
-        <input required='' name="heightSize" inputmode="number" type="number" placeholder="Altura (px)">
+      <div class="col-12 form-floating mb-3">
+
+        <input inputmode="number" type="number" 
+        name="widhtSize" id="widhtSize" class="form-control"
+        placeholder="Tamanho (px)"
+        >
+        <label for="widhtSize">Tamanho (px)</label>
+        
       </div>
+      
 
       <div class="col-12 mb-3">
         <button type="button">
