@@ -35,8 +35,9 @@ qrInput.addEventListener("keyup", () => {
 });
 
 downloadBtn.addEventListener('click', () => {
-    let imgPath = qrCode.getAttribute('src');
+    let imgPath = qrImg.getAttribute('src');
     let fileName = getFileName(imgPath);
+    
 
     saveAs(imgPath, fileName);
 });
