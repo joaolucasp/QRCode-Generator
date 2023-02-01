@@ -1,0 +1,130 @@
+/* Import Google Font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  background: linear-gradient(#3498DB, #dedede);
+  background-attachment: fixed;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+}
+
+/*Main Container and Forms*/
+#mainContainer{
+  width: 35%;
+  height: 410px;
+  background: #fff;
+  border-radius: 7px;
+  padding: 30px;
+  transition: height 0.5s ease;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.form :where(input, button){
+  width: 100%;
+  height: 55px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  transition: 0.1s ease;
+}
+
+.form input{
+  font-size: 18px;
+  padding: 0 15px;
+  border: 1px solid #999;
+}
+
+.form input:focus{
+  box-shadow: 0 3px 6px rgba(0,0,0,0.13);
+}
+
+.form input::placeholder{
+  color: #999;
+}
+
+.form button{
+  color: #FFF;
+  cursor: pointer;
+  font-size: 18px;
+  background: #3498DB;
+}
+
+.form button:hover{
+  transition: 0.3s;
+  background: #0075c3;
+}
+/*--------------*/
+
+/*Text Formating*/
+header h1{
+  font-size: 30px;
+  font-weight: 500;
+}
+
+header p{
+  margin-top: 5px;
+  color: #575757;
+  font-size: 16px;
+}
+
+fieldset {
+  font-weight: 400;
+  color: #3a3a3a;
+}
+/*----------------*/
+
+/*Wrapper Active*/
+#mainContainer.active{
+  height: 670px;
+}
+/*--------------*/
+
+/*Result Request*/
+.qr-code-result{
+  opacity: 0;
+  pointer-events: none;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+#mainContainer.active .qr-code-result{
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 0.5s 0.05s ease;
+}
+
+.qr-code-result img{
+  width: 150px;
+  display: block;
+}
+/*--------------*/
+
+@media (max-width: 430px){
+  /* #mainContainer{
+    height: 255px;
+    padding: 16px 20px;
+  }
+  #mainContainer.active{
+    height: 510px;
+  }
+  header p{
+    color: #696969;
+  }
+  .form :where(input, button){
+    height: 52px;
+  }
+  .qr-code-result img{
+    width: 160px;
+  }   */
+}
