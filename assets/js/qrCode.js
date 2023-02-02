@@ -9,6 +9,7 @@ qrFormat = mainContainer.querySelector("#format"),
 
 // Buttons
 generateBtn = mainContainer.querySelector(".form button"),
+textGenerateBtn = generateBtn.querySelector("span"),
 downloadBtn = mainContainer.querySelector(".qr-code-result button");
 
 // QR Image
@@ -29,12 +30,12 @@ generateBtn.addEventListener("click", () => {
     };
 
     preValue = qrValue;
-    generateBtn.innerText = "Gerando QR Code...";
+    textGenerateBtn.innerText = "Gerando QR Code...";
     qrImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=${qrSize}x${qrSize}&data=${qrValue}&bgcolor=${qr_BackgroundColor}&color=${qr_Color}&margin=5&format=${qr_Format}`;
 
     qrImg.addEventListener("load", () => {
         mainContainer.classList.add("active");
-        generateBtn.innerText = "Gerar QR Code";
+        textGenerateBtn.textContent = "Gerar QR Code";
     });
 });
 
