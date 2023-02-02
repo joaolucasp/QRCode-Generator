@@ -10,7 +10,8 @@
 ![Bitbucket open issues](https://img.shields.io/bitbucket/issues/joaolucasp/QRCode-Generator)
 ![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/joaolucasp/QRCode-Generator)
 
-<img>
+![img1](https://user-images.githubusercontent.com/83319546/216202603-85cb1306-b178-4ac6-a25e-959eccacb417.png)
+![img2](https://user-images.githubusercontent.com/83319546/216202611-f962444f-407d-4be7-8083-c1a8b4fd0a87.png)
 > Este projeto contempla um gerador de QR Code gratuito construído em JavaScript.
 
 ## 📫 Contribuindo para QR Code Generator
