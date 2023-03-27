@@ -80,15 +80,14 @@
         <div class="col-md-6">
           <div class="row">
             <div class="col-8 form-floating color-input">
-              <input inputmode="number" type="number"
-              name="color" id="color" class="form-control"
-              placeholder="#Color">
-              <label for="color">#Color</label>
+              <input inputmode="number" minlength="7" maxlength="7" type="text"
+              name="color" id="color" class="form-control" value="#"
+              placeholder="#Color" onchange="changeColorPicker('GFG_Color', value)">
+              <label for="color">#Color (HEX)</label>
             </div>
             <div class="col-4 color-picker">
               <input type="color" class="form-control form-control-color input-group-text" 
-              id="GFG_Color" value="#000000" 
-              >
+              id="GFG_Color" value="#000000" onchange="changeColorPicker('color', value)">
             </div>
           </div>
         
@@ -97,15 +96,14 @@
         <div class="col-md-6">
           <div class="row">
             <div class="col-8 form-floating color-input">
-              <input inputmode="number" type="number"
-              name="backgroundColor" id="backgroundColor" class="form-control"
-              placeholder="#BackgroundColor">
+              <input inputmode="number" minlength="7" maxlength="7" type="text"
+              name="backgroundColor" id="backgroundColor" class="form-control" value="#"
+              placeholder="#BackgroundColor" onchange="changeColorPicker('GFG_BackgroudColor', value)">
               <label for="backgroundColor">#BackgroundColor</label>
             </div>
             <div class="col-4 color-picker">
               <input type="color" class="form-control form-control-color input-group-text" 
-              id="GFG_BackgroundColor" value="#ffffff" 
-              >
+              id="GFG_BackgroundColor" value="#ffffff" onchange="changeColorPicker('backgroundColor', value)">
             </div>
           </div>
         
